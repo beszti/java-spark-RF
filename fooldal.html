@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MagDigital</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/xmlreq.js"></script>
+
+<style>
+
+
+
+</style>
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="M2_logo.png" class="img-responsive" alt="Cinque Terre" width="280"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="fooldal.html">Kezdőlap
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aruk.html">Termékek</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kocsi.html">Rendelések</a>
+          </li>
+          <li id="udvozles" class="nav-item">
+            <a class="nav-link" href="login.html">Bejelentkezés</a>
+          </li>
+          <li id="regist" class="nav-item">
+            <a class="nav-link" href="regist.html">Regisztráció</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+
+<div class="jumbotron text-center">
+    <br>
+    <h1>Keresd meg kedvenc termékeid!!</h1>
+    <p class="lead">Fantasztikusan nagy kínálatunkból válaszhatsz akár 20-30%-os akciókkal!.</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <h2 id="login">100% pénzvisszafizetési garancia</h2>
+        <p>Amennyiben az átvételtől számított 14 napon belül nincs megelégedve a vásárolt termékkel, pénzét 100%-ig visszatérítjük.</p>
+        <p><img src="kepek/penzgarancia.jpg" height="" width="404"></p>
+    </div>
+    <div class="col-lg-4">
+        <h2>Regisztrálj most!</h2>
+        <p>Black Friday akciónk keretében most jóval olcsóbban juthatsz hozzá kedvenc termékeidhez.</p>
+        <p><img src="kepek/akcio.jpg" height="" width="404"></p>
+    </div>
+    <div class="col-lg-4">
+        <h2>Készítették</h2>
+        <i><span>Beszterczán Gergő</span><br>
+        <span>Hideg Réka</span><br>
+        <span>Korsós Tibor</span><br>
+        <span>Nagy Róbert</span><br>
+        <span>Schwan Krisztián</span></i><br>
+        <br>
+        <b><i>MagDigital Projekt 2017 ©</i></b>
+    </div>
+</div>
+<script type="text/javascript">
+    if(sessionStorage.getItem("username")){
+    document.getElementById("udvozles").innerHTML = '<a class="nav-link" href="profil.html">'+sessionStorage.getItem("nev")+'</a>'; 
+    document.getElementById("regist").innerHTML = "";
+    }
+</script>
+</body>
+</html>

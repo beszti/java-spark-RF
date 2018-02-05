@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MagDigital</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link href="assets/css/aruk.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="fooldal.html"><img src="M2_logo.png" class="img-responsive" alt="Cinque Terre" width="280"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="fooldal.html">Kezdőlap
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aruk.html">Termékek</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kocsi.html">Rendelések</a>
+        </li>
+        <li id="udvozles" class="nav-item">
+          <a class="nav-link" href="login.html">Bejelentkezés</a>
+        </li>
+        <li id="regist" class="nav-item">
+          <a class="nav-link" href="regist.html">Regisztráció</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+    <div class="container">
+
+      <div class="row" >
+
+       
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/1.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='1' onclick="myRendel(1,2,1)" href="#">ASUS X552CL laptop</a>
+                  </h4>
+                  <h5 id='2'>89990 Ft</h5>
+                  <p class="card-text">Designos, könnyen kezelhető szépség, amely bár nem annyira gyors, megbízhatóságával elkápráztatja felhasználóját.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/2.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='3' onclick="myRendel(3,4,2)" href="#">Logitech Z333 hangfal</a>
+                  </h4>
+                  <h5 id='4'>16990 Ft</h5>
+                  <p class="card-text">Ez a kis szörnyeteg többre képes, mint hinnéd. 40W effektív teljesítményével minden kihívóját leseper a középkategória élén!</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/3.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='5' onclick="myRendel(5,6,3)" href="#">Gorenje K57CLB1 kombinált tűzhely</a>
+                  </h4>
+                  <h5 id='6'>149990 Ft</h5>
+                  <p class="card-text">Kombinált tűzhely, 10 sütési funkció, Elektromos szikragyújtás</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/4.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='7' onclick="myRendel(7,8,4)" href="#">Sencor SWS 11 Hőmérő vezetékes érzékelővel</a>
+                  </h4>
+                  <h5 id='8'>1290 Ft</h5>
+                  <p class="card-text">Benti és kinti hőmérséklet, 12/24 órás időformátum, Ébresztő és ismételt ébresztés funkció</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/5.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='9' onclick="myRendel(9,10,5)" href="#">Russell Hobbs Desire 18966 kézi mixer</a>
+                  </h4>
+                  <h5 id='10'>7490 Ft</h5>
+                  <p class="card-text">380 W teljesítmény, 5 sebességfokozat + turbo, Széles talp, hogy biztonságosan álljon</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/6.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='11' onclick="myRendel(11,12,6)" href="#">Kingston microSDXC kártya 64GB Class3</a>
+                  </h4>
+                  <h5 id='12'>19990 Ft</h5>
+                  <p class="card-text">64 GB kapacitás, Max. 80 MB/s írási sebesség, Class 3</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/7.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='13' onclick="myRendel(13,14,7)" href="#">PocketBook Touch Lux 3 626 ebook olvasó, fehér</a>
+                  </h4>
+                  <h5 id='14'>37990 Ft</h5>
+                  <p class="card-text">6 inch E-Ink (1024x758) kijelző, 4 GB belső memória, Wifi kapcsolat</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/8.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='15' onclick="myRendel(15,16,8)" href="#">Samsung S24D330H 24 inch LED gaming monitor</a>
+                  </h4>
+                  <h5 id='16'>37990 Ft</h5>
+                  <p class="card-text">Kijelző technológiája: TN, Optimális felbontás: 1920 x 1080, Színek száma: 16.7 millió</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/9.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='17' onclick="myRendel(17,18,9)" href="#">Redragon gaming készlet</a>
+                  </h4>
+                  <h5 id='18'>10990 Ft</h5>
+                  <p class="card-text">Billentyűzet, egér, fejhallgató és egérpad, Háttérvilágítású billentyűzet: Igen, Technológia: Vezetékes</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted"> &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/10.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='19' onclick="myRendel(19,20,10)" href="#">Whirlpool AWOC6304 Elöltöltős mosógép</a>
+                  </h4>
+                  <h5 id='20'>79900 Ft</h5>
+                  <p class="card-text">6 kg, 1200 ford/perc, 6. érzék funkció, Beépítés típusa: Standard, Mosógép típusa: Standard</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/11.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='21' onclick="myRendel(21,22,11)" href="#">Heinner HCF-306A+ Fagyasztóláda</a>
+                  </h4>
+                  <h5 id='22'>70900 Ft</h5>
+                  <p class="card-text">306L, A+ energiaosztály, Fehér, Méretek (magasság x szélesség x mélység cm) 112.5 x 83 x 67, Standard kinyitás: Függőleges</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/12.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='23' onclick="myRendel(23,24,12)" href="#">Whirlpool AMD 351/1 Inverter Klímaberendezés</a>
+                  </h4>
+                  <h5 id='24'>149900</h5>
+                  <p class="card-text">12000 BTU, A++ energiaosztály, 6.Érzék, Aktív szénszűrő, Öntisztító, Páramentesítés</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/13.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='25' onclick="myRendel(25,26,13)" href="#">Xbox One Slim 500GB konzol</a>
+                  </h4>
+                  <h5 id='26'>88900 Ft</h5>
+                  <p class="card-text">Ajándék Forza Horizon 3 játék, Fehér szín, Csatlakoztathatóság: Wi-Fi Ethernet, Portok: HDMI out 3 x USB 3.0 HDMI in 1 x S/PDIF</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/14.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='27' onclick="myRendel(27,28,14)" href="#">Sony Playstation 4 SLIM konzo</a>
+                  </h4>
+                  <h5 id='28'>89900 Ft</h5>
+                  <p class="card-text">500 GB, Fekete, Magyar menüvel, Csatlakoztathatóság: Bluetooth Wi-Fi Ethernet Portok: 1 x HDMI 2 x USB 3.1 1 x AUX port</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/15.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='29' onclick="myRendel(29,30,15)" href="#">Nikon COOLPIX B500 digitális fényképezőgép</a>
+                  </h4>
+                  <h5 id='30'>76900 Ft</h5>
+                  <p class="card-text">16.1MP, Fekete, Képformátum: JPEG, Képstabilizátor: Mechanikus és elektronikus VR stabilizátor Képfelbontás: 4608 x 3456</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/16.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='31' onclick="myRendel(31,32,16)" href="#">Epson EH-TW5300 projektor, Full HD, 3D, 2200 lumen</a>
+                  </h4>
+                  <h5 id='32'>184990 Ft</h5>
+                  <p class="card-text">Vetítési távolság:Normál, Szegmens: Házimozi, 3D: Igen,Natív felbontás:1920 x 1080, Kontraszt: 35000 : 1</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/17.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='33' onclick="myRendel(33,34,17)" href="#">A+ Screen WS1-250 kézi vetítővászon , 250cm x 250cm</a>
+                  </h4>
+                  <h5 id='34'>18900 Ft</h5>
+                  <p class="card-text">Kijelző típusa:Kézi, Rögzítés: Fal, Képernyő formátum: 1:1, Láthatósági szög (fok): 160, Távirányítóval: Nem, Szín:Fehér</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted"> &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/18.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='35' onclick="myRendel(35,36,18)" href="#">Bosch Sensixx'x DA10 TDA1023010 vasaló</a>
+                  </h4>
+                  <h5 id='36'>9690 Ft</h5>
+                  <p class="card-text">Palladium-Glissee talp, 2300 W, 0.3 l, 35 g/perc, 120 g/perc, 1.9 m, Fehér/Kék,Szélesség: 28 cm, Magasság: 14 cm, Mélység: 11.5 cm</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted"> &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/19.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='37' onclick="myRendel(37,38,19)" href="#">Samsung VCC52U1V3R/XEH porzsákos porszívó</a>
+                  </h4>
+                  <h5 id='38'>17990 Ft</h5>
+                  <p class="card-text">750W, B energiaosztály, Porzsák 2.5 l, Piros, Cső típus: Teleszkópos acél, Porzsák típus: Papír, Kiegészítők:Résszívó Poroló</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733;  &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="kepek/20.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a id='39' onclick="myRendel(39,40,20)" href="#">Philips HD9320/20 vízforraló</a>
+                  </h4>
+                  <h5 id='40'>8990 Ft</h5>
+                  <p class="card-text">2200 W, 1.7 l, Fekete/Ezüstszürke, Tápkábel hossza (m):0.75, Készülékház anyaga: Rozsdamentes acél,Egyéb: On/off gomb</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; </small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright MagDigital 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+  
+    <script type="text/javascript">
+      function myRendel(x,y,z){
+        var x_get = document.getElementById(x).innerHTML;
+        var y_get = document.getElementById(y).innerHTML;
+        console.log("["+z+"] "+x_get + " rendelve " + y_get + "arral");
+        sessionStorage.setItem("termek_id", x_get);
+        sessionStorage.setItem("termek_ar", y_get);
+        sessionStorage.setItem("termek_kep", z);
+        window.location = 'kocsi.html';
+      }
+      if(sessionStorage.getItem("username")){
+      document.getElementById("udvozles").innerHTML = '<a class="nav-link" href="profil.html">'+sessionStorage.getItem("nev")+'</a>'; 
+      document.getElementById("regist").innerHTML = "";
+      }
+  </script>
+  </body>
+
+</html>

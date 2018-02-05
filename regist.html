@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Regisztráció</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/xmlreq.js"></script>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="fooldal.html"><img src="M2_logo.png" class="img-responsive" alt="Cinque Terre" width="280"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="fooldal.html">Kezdőlap
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aruk.html">Termékek</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Rendelések</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kocsi.html">Kosár</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profilom</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+
+
+
+<div class="container">
+
+    <h1>Regisztráció</h1>
+
+    <form class="form-horizontal" action="/action_page.php">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email"></label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="email-cím" name="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="username"></label>
+            <div class="col-sm-10">
+                <input type="username" class="form-control" id="username" placeholder="username" name="username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="fullname"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="fullname" placeholder="teljes név" name="fullname">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd"></label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="pwd" placeholder="jelszó" name="pwd">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="address"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="address" placeholder="utca és házszám" name="address">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="zipcode"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="zipcode" placeholder="irányítószám" name="zipcode">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="phone"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="phone" placeholder="telefonszám" name="phone">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <!--<button type="submit" class="btn">Regisztráció!</button> -->
+                <a href="javascript:void(0)" id="regbut" class="btn btn-default" onclick="regMeIn(); ">Regisztráció!</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script>
+
+function regMeIn(){
+    var email = document.getElementById("email").value;
+    var username = document.getElementById("username").value;
+    var fullname = document.getElementById("fullname").value;
+    var password = document.getElementById("pwd").value;
+    var address = document.getElementById("address").value;
+    var zipcode = document.getElementById("zipcode").value;
+    var phone = document.getElementById("phone").value;
+
+    var client = new HttpClient();
+        client.post('http://localhost:8081/user/reg/'
+            + username
+            +'/'
+            + password
+            +'/'
+            + fullname
+            +'/'
+            + email
+            +'/'
+            + phone
+            +'/'
+            + zipcode
+            +'/'
+            + address, "GET");
+
+        client.get('http://localhost:8081/user/login/'
+            + username
+            +'/'
+            + password
+            +'/'
+            + fullname
+            +'/'
+            + email
+            +'/'
+            + phone
+            +'/'
+            + zipcode
+            +'/'
+            + address, function(response) {
+              console.log(response);
+            });
+
+    console.log('http://localhost:8081/user/reg/'
+            + username
+            +'/'
+            + password
+            +'/'
+            + fullname
+            +'/'
+            + email
+            +'/'
+            + phone
+            +'/'
+            + zipcode
+            +'/'
+            + address);
+    var client = new HttpClient();
+        client.get('http://localhost:8081/user/reg/'
+            + username
+            +'/'
+            + password
+            +'/'
+            + fullname
+            +'/'
+            + email
+            +'/'
+            + phone
+            +'/'
+            + zipcode
+            +'/'
+            + address
+            , function(response) {
+              console.log(response);
+              window.location ='fooldal.html';
+          });
+}
+</script>
+
+</body>
+</html>

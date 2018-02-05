@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bevásárló kocsi</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/cart.css"/>		
+	</head>
+
+	<body>
+		
+		<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+	<div class="container">
+		<a class="navbar-brand" href="fooldal.html"><img src="M2_logo.png" class="img-responsive" alt="Cinque Terre" width="280"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="fooldal.html">Kezdőlap
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="aruk.html">Termékek</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="kocsi.html">Rendelések</a>
+				</li>
+				<li id="udvozles" class="nav-item">
+					<a class="nav-link" href="login.html">Bejelentkezés</a>
+				</li>
+				<li id="regist" class="nav-item">
+					<a class="nav-link" href="regist.html">Regisztráció</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- Page Content -->
+
+		
+		<div class="container-fluid breadcrumbBox text-center" >
+			</div>
+		
+		
+		<div class="container text-center">
+
+			<div class="col-md-5 col-sm-12">
+				<div class="bigcart"></div>
+				<h1>Rendelésed:</h1>
+			
+			
+			</div>
+			
+			
+			
+			<div class="col-md-7 col-sm-12 text-left">
+				<ul>
+					<li class="row list-inline columnCaptions">
+						<span> Darab </span>
+						<span>Termék</span>
+						<span>Ár</span>
+					</li>
+					<li class="row">
+						<span id='termekszam' class="quantity">0</span>
+						<span id='termeknev' class="itemName">Nincs rendelés</span>
+						
+						<span id='ar' class="price">-</span>
+					</li>
+					<input class="btn btn-primary" onclick="Rendel()" type="submit" value="Rendel">
+				</ul>
+			</div>
+			<div class="col-md-7 col-sm-12 text-left">
+				<div id='kep' class="card h-100">
+				  
+				</div>
+		</div>
+	
+			
+
+		
+</div>
+		<!-- The popover content -->
+
+		<div id="popover" style="display: none">
+			<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+		</div>
+		
+		<!-- JavaScript includes -->
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/customjs.js"></script>
+		<script type="text/javascript">
+			function Rendel(){
+				if(sessionStorage.getItem("username")){
+					if(sessionStorage.getItem("bought")){
+						alert("Rendelése már rögzítve van, és beszállítás alatt!");
+						alert("Köszönjük, hogy a MagDigital-nál vásárolt!");
+					}else{
+						alert("Sikeres Rendelés!");
+						window.location = 'fooldal.html';
+						sessionStorage.setItem("bought", "ok");
+					}
+					
+				}
+			}
+			if(sessionStorage.getItem("termek_id")){
+				document.getElementById("termekszam").innerHTML = "1";
+				document.getElementById("termeknev").innerHTML = sessionStorage.getItem("termek_id");
+				document.getElementById("ar").innerHTML = sessionStorage.getItem("termek_ar");
+				document.getElementById("kep").innerHTML = '<a href="#"><img class="card-img-top" src="kepek/'+sessionStorage.getItem("termek_kep")+'.jpg" alt=""></a>';
+			}
+			if(sessionStorage.getItem("username")){
+			document.getElementById("udvozles").innerHTML = '<a class="nav-link" href="profil.html">'+sessionStorage.getItem("nev")+'</a>'; 
+			document.getElementById("regist").innerHTML = "";
+			}
+	</script>
+	</body>
+</html>

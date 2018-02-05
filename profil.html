@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MagDigital</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/xmlreq.js"></script>
+
+<style>
+
+
+
+</style>
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="fooldal.html"><img src="M2_logo.png" class="img-responsive" alt="Cinque Terre" width="280"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="fooldal.html">Kezdőlap
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aruk.html">Termékek</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kocsi.html">Rendelések</a>
+        </li>
+        <li id="udvozles" class="nav-item">
+          <a class="nav-link" href="login.html">Bejelentkezés</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+
+<div class="jumbotron text-center">
+    <h1>Profil adatok:</h1>
+</div>
+<div class="row">
+  <div class="col"><b>Név:</b></div>
+  <div id="nev" class="col">'adat'</div>
+  <div class="w-100"></div>
+  <div class="col"><b>Felhasználónév:</b></div>
+  <div id="username" class="col">'adat'</div>
+  <div class="w-100"></div>
+  <div class="col"><b>Email:</b></div>
+  <div id="email" class="col">'adat'</div>
+  <div class="w-100"></div>
+  <div class="col"><b>Telefon:</b></div>
+  <div id="telefon" class="col">'adat'</div>
+  <div class="w-100"></div>
+  <div class="col"><b>Irányítószám:</b></div>
+  <div id="irsz" class="col">'adat'</div>
+  <div class="w-100"></div>
+  <div class="col"><b>Lakcím:</b></div>
+  <div id="utca" class="col">'adat'</div>
+</div>
+
+
+<script type="text/javascript">
+    if(localStorage.getItem("username") != "null"){
+    document.getElementById("udvozles").innerHTML = '<a class="nav-link" href="profil.html">'+sessionStorage.getItem("nev")+'</a>'; 
+    document.getElementById("nev").innerHTML ='<i>'+ sessionStorage.getItem("nev") + '</i>';
+    document.getElementById("username").innerHTML ='<i>'+ sessionStorage.getItem("username")+ '</i>';
+    document.getElementById("email").innerHTML ='<i>'+ sessionStorage.getItem("email")+ '</i>';
+    document.getElementById("telefon").innerHTML ='<i>'+ sessionStorage.getItem("telefon")+ '</i>';
+    document.getElementById("irsz").innerHTML ='<i>'+ sessionStorage.getItem("irsz")+ '</i>';
+    document.getElementById("utca").innerHTML ='<i>'+ sessionStorage.getItem("utca")+ '</i>';
+    }else{   
+        document.getElementById("udvozles").innerHTML = '<a class="nav-link" href="login.html">Bejelentkezés</a>';   
+    }
+</script>
+</body>
+</html>
